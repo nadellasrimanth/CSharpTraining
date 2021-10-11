@@ -10,11 +10,11 @@ using OpenQA.Selenium.Chrome;
 
 namespace CSharpPractice
 {
-    public class genname
+    public class GenName
     {
         public static void Main(string[] args)
         {
-            genname dd = new genname();
+            GenName dd = new GenName();
             dd.Start();
         }
 
