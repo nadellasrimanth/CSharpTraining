@@ -10,14 +10,13 @@ using OpenQA.Selenium.Chrome;
 
 namespace CSharpPractice
 {
-    public class genname
+    public class GenName
     {
         public static void Main(string[] args)
         {
-            genname dd = new genname();
+            GenName dd = new GenName();
             dd.Start();
         }
-
 
         //selenium script
         public ChromeDriver driver;
@@ -31,6 +30,7 @@ namespace CSharpPractice
             driver.FindElement(By.XPath("//h5[text()='Elements']")).Click();
             WebTables();
         }
+
         public void WebTables()
         {
             RandomUserDetails rum = new RandomUserDetails();
@@ -44,10 +44,7 @@ namespace CSharpPractice
             driver.FindElement(By.XPath("//input[contains(@id,'age')]")).SendKeys(userdd.Age.ToString());
             driver.FindElement(By.XPath("//input[contains(@id,'salary')]")).SendKeys(userdd.Salary.ToString());
             driver.FindElement(By.XPath("//input[contains(@id,'department')]")).SendKeys(userdd.Department);
-            driver.FindElement(By.XPath("//button[contains(@id,'submit')]")).Click();
-
-            
+            driver.FindElement(By.XPath("//button[contains(@id,'submit')]")).Click();            
         }
-
     }
 }
