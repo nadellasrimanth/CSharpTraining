@@ -18,7 +18,6 @@ namespace CSharpPractice
             dd.Start();
         }
 
-
         //selenium script
         public ChromeDriver driver;
         public void Start()
@@ -31,6 +30,7 @@ namespace CSharpPractice
             driver.FindElement(By.XPath("//h5[text()='Elements']")).Click();
             WebTables();
         }
+
         public void WebTables()
         {
             RandomUserDetails rum = new RandomUserDetails();
@@ -44,10 +44,7 @@ namespace CSharpPractice
             driver.FindElement(By.XPath("//input[contains(@id,'age')]")).SendKeys(userdd.Age.ToString());
             driver.FindElement(By.XPath("//input[contains(@id,'salary')]")).SendKeys(userdd.Salary.ToString());
             driver.FindElement(By.XPath("//input[contains(@id,'department')]")).SendKeys(userdd.Department);
-            driver.FindElement(By.XPath("//button[contains(@id,'submit')]")).Click();
-
-            
+            driver.FindElement(By.XPath("//button[contains(@id,'submit')]")).Click();            
         }
-
     }
 }
